@@ -3,7 +3,6 @@ module.exports = (app) => {
     index(req, res) {
       res.render('home/index');
     },
-
     login(req, res) {
       const { usuario } = req.body;
       const { email, nome } = usuario;
@@ -15,7 +14,6 @@ module.exports = (app) => {
         res.redirect('/');
       }
     },
-    
     logout(req, res) {
       req.session.destroy();
       res.redirect('/');
